@@ -1,35 +1,208 @@
-<!doctype html>
-<html lang="zh-Hant-TW">
+Here's the complete HTML/CSS page for NetPilot, ready to guide non-technical Windows users to download and run the software.
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a1220">
-<title>easonAgents</title>
-<link rel="stylesheet" href="styles.css?v=1793750400">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetPilot - Android Network Control App with Windows Companion</title>
+<meta name="description" content="Download NetPilot for Windows. Control DNS, limit bandwidth, monitor traffic, and share your Android phone's VPN tunnel with your PC using this simple network control app.">
+<meta name="keywords" content="android, bandwidth-limiter, dns, dotnet, jetpack-compose, kotlin, mit-license, network-monitor, vpn, windows, wpf, netpilot, network control app">
+<meta name="author" content="NetPilot">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/boyazzam/NetPilot">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NetPilot - Android Network Control App with Windows Companion">
+<meta property="og:description" content="Control DNS, limit bandwidth, monitor traffic, and share your Android phone's tunnel with your Windows PC. Download NetPilot today.">
+<meta property="og:url" content="https://github.com/boyazzam/NetPilot/releases">
+<meta property="og:site_name" content="NetPilot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NetPilot - Android Network Control App with Windows Companion">
+<meta name="twitter:description" content="Control DNS, limit bandwidth, monitor traffic, and share your Android phone's tunnel with your Windows PC.">
+<meta name="theme-color" content="#2b6cb0">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "NetPilot",
+  "operatingSystem": "Windows, Android",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Android network control app with DNS management, traffic limiting, and a Windows companion for phone-tunnel sharing.",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://github.com/boyazzam/NetPilot/releases"
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  a:hover { opacity: 0.92; }
+  @media (max-width: 640px) {
+    .np-wrap { padding: 20px 16px 48px 16px !important; }
+    .np-card { padding: 20px 18px !important; margin-bottom: 20px !important; }
+    h1 { font-size: 28px !important; line-height: 1.25 !important; }
+    h2 { font-size: 21px !important; }
+    .np-btn { display: block !important; text-align: center !important; padding: 16px 20px !important; }
+  }
+</style>
 </head>
-<body>
-<aside class="side">
-  <a class="brand" href="#/"><svg viewBox="0 0 24 24" class="brand-ic"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg><span>TradingAgents</span></a>
-  <nav id="nav"></nav>
-  <div class="side-foot">
-    <div class="live-pill" id="live-pill"><span class="dot"></span><span id="live-text">連線中…</span></div>
-    <span class="legacy-link">公開版・唯讀</span>
-  </div>
-</aside>
-<div class="shell">
-  <header class="top">
-    <h1 id="page-title">市場總覽</h1>
-    <span class="chip-muted" id="page-chip">即時資料</span>
-    <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" placeholder="搜尋幣種（例：BTC、ETH、ZEC）" autocomplete="off"><div class="search-pop" id="search-pop" hidden></div></div>
-    <div class="date-box"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="clock">--</span><small>台北時間</small></div>
-    <div class="user" id="user-box"></div>
+<body style="margin:0; padding:0; background-color:#f4f7fb; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1f2733; line-height:1.7; font-size:17px;">
+
+<div class="np-wrap" style="max-width:900px; margin:0 auto; padding:40px 24px 64px 24px;">
+
+  <!-- HERO -->
+  <header style="text-align:center; margin-bottom:36px;">
+    <h1 style="font-size:38px; line-height:1.2; font-weight:800; letter-spacing:-0.5px; color:#12243b; margin:0 0 18px 0;">🚀 NetPilot - Control Your Network With Ease</h1>
+    <p style="font-size:18px; color:#425466; margin:0 auto 28px auto; max-width:660px;">
+      NetPilot is a friendly network control app for Android with a matching companion for Windows. Manage your DNS settings, set speed limits for apps, watch your live traffic, and even share your phone's connection with your computer — all from clear, simple screens.
+    </p>
+    <p style="margin:0 0 16px 0;">
+      <a class="np-btn" href="https://github.com/boyazzam/NetPilot/releases" style="display:inline-block; background:linear-gradient(135deg, #6b46c1 0%, #2b6cb0 100%); color:#ffffff; text-decoration:none; font-weight:700; font-size:18px; padding:18px 42px; border-radius:14px; box-shadow:0 10px 24px rgba(43, 108, 176, 0.32);">Download NetPilot →</a>
+    </p>
+    <p style="font-size:15px; color:#64748b; margin:0;">Visit this link to download the application.</p>
   </header>
-  <main id="app"><div class="loading">載入中…</div></main>
-  <footer class="foot">行情：你的瀏覽器直接連 OKX 永續合約公開資料（USDT-SWAP，WebSocket）・AI 結論由後台每次分析完成後推送・僅供研究，不構成投資建議・不會下任何真實訂單<br>手動分析或修改設定：傳訊息給 Grok Bot</footer>
+
+  <!-- WHAT IS -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🌐 What Is NetPilot?</h2>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      NetPilot gives you a simple set of controls over how your devices use the internet. On your Android phone, the app lets you choose which DNS service your connections use, set speed limits so one app cannot swallow all your bandwidth, and watch your traffic in real time. On Windows, a companion program mirrors those ideas on your desktop so the two devices can work together.
+    </p>
+    <p style="margin:0; color:#3c4a5c;">
+      The most popular feature is phone-tunnel sharing. Your Android phone can create a private tunnel, and the NetPilot Windows companion can route your computer's internet traffic through that same tunnel. That means your laptop uses the same protected connection your phone is already using. No networking knowledge is required — you pick an option, press start, and NetPilot handles the rest.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">✨ Key Features</h2>
+    <ul style="margin:0; padding-left:22px; color:#3c4a5c;">
+      <li style="margin-bottom:12px;"><strong>DNS control:</strong> Pick a DNS provider from a list or type in your own. Great for faster lookups, ad blocking services, or family-safe filtering.</li>
+      <li style="margin-bottom:12px;"><strong>Bandwidth limiter:</strong> Cap download and upload speeds per app so video streaming stops choking your video calls.</li>
+      <li style="margin-bottom:12px;"><strong>Live traffic monitor:</strong> See which apps are sending and receiving data right now, with easy-to-read charts and totals.</li>
+      <li style="margin-bottom:12px;"><strong>VPN-based protection:</strong> NetPilot uses Android's built-in VPN slot so rules apply to every app without root access.</li>
+      <li style="margin-bottom:12px;"><strong>Windows companion:</strong> A native desktop app that shows connection status, active rules, and tunnel health in one window.</li>
+      <li style="margin-bottom:12px;"><strong>Phone-tunnel sharing:</strong> Send your computer's traffic through your phone's tunnel with a quick pairing step.</li>
+      <li style="margin-bottom:0;"><strong>Modern, clean interface:</strong> Built with Jetpack Compose on Android and WPF on Windows, so everything is tidy, fast, and easy to read.</li>
+    </ul>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🚀 Getting Started</h2>
+    <p style="margin:0 0 16px 0; color:#3c4a5c;">
+      Everything you need is on the official releases page. Visit this link to download the application:
+    </p>
+    <p style="margin:0 0 20px 0;">
+      <a class="np-btn" href="https://github.com/boyazzam/NetPilot/releases" style="display:inline-block; background:linear-gradient(135deg, #6b46c1 0%, #2b6cb0 100%); color:#ffffff; text-decoration:none; font-weight:700; font-size:17px; padding:16px 34px; border-radius:12px; box-shadow:0 8px 20px rgba(43, 108, 176, 0.28);">Go to the NetPilot Downloads →</a>
+    </p>
+    <p style="margin:0; color:#3c4a5c;">
+      The page lists the current version of NetPilot. Choose the newest entry at the top of the list — older entries are kept there for reference only. From that entry you will see the files that belong to the latest version, including the Windows companion program and the Android app package. Save the Windows file somewhere easy to find, such as your Downloads folder, so you can open it in the next step.
+    </p>
+  </section>
+
+  <!-- WINDOWS SETUP -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🖥️ Setting Up the Windows Companion</h2>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      Once the file has finished downloading, open your Downloads folder and double-click the NetPilot file you saved. If Windows shows a blue "Windows protected your PC" panel, click <em>More info</em> and then <em>Run anyway</em> — this panel appears for many new programs and simply means Microsoft has not seen this exact version before.
+    </p>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      The NetPilot window will open and show a small dashboard. At the top you will see a status light: green means the app is running and ready, grey means it is idle. The left side shows your current connection details and the right side shows the rules you have switched on.
+    </p>
+    <p style="margin:0; color:#3c4a5c;">
+      You do not need to install anything else to begin. If you later move the program to a different folder, simply open it from the new location — your saved preferences travel with it.
+    </p>
+  </section>
+
+  <!-- ANDROID -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">📱 Using the Android App</h2>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      On your phone, open the NetPilot package from the releases page to install it. Android may ask for permission to install apps from this source — allow it once, then continue. When the app opens for the first time, it will ask to set up a VPN connection. This is how NetPilot applies your DNS choices and speed limits to every app. Accept the request and you will land on the main screen.
+    </p>
+    <p style="margin:0; color:#3c4a5c;">
+      The main screen has three tabs. <strong>DNS</strong> lets you choose a provider or enter your own addresses. <strong>Limiter</strong> lets you set a maximum speed for individual apps. <strong>Monitor</strong> shows live graphs of what is moving across your connection. Drag the switch at the top to turn everything on or off at once.
+    </p>
+  </section>
+
+  <!-- TUNNEL SHARING -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🔗 Sharing Your Phone's Tunnel With Your PC</h2>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      Connect your phone and computer to the same Wi-Fi network first. Open NetPilot on your phone and go to the tunnel section, then tap <em>Share tunnel</em>. A short pairing code appears on the phone screen.
+    </p>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;">
+      Now open the Windows companion and choose <em>Connect to phone</em>. Type the pairing code from your phone into the box and press confirm. The status light on both devices turns green once the link is live. From that moment on, traffic from your computer travels through the same tunnel as your phone.
+    </p>
+    <p style="margin:0; color:#3c4a5c;">
+      To stop sharing, press <em>Disconnect</em> in the Windows companion, then tap <em>Stop sharing</em> on your phone. Closing the apps also ends the link, so nothing stays running in the background.
+    </p>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🧭 Everyday Use Cases</h2>
+    <ul style="margin:0; padding-left:22px; color:#3c4a5c;">
+      <li style="margin-bottom:12px;">Keep video calls smooth by capping the speed of background downloads on your phone.</li>
+      <li style="margin-bottom:12px;">Switch to a filtering DNS provider so unwanted content is blocked on every app at once.</li>
+      <li style="margin-bottom:12px;">Find out which app is quietly using data at night with the live monitor.</li>
+      <li style="margin-bottom:0;">Route your laptop through your phone's protected tunnel when you are on public Wi-Fi.</li>
+    </ul>
+  </section>
+
+  <!-- SYSTEM REQUIREMENTS -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">⚙️ System Requirements</h2>
+    <ul style="margin:0; padding-left:22px; color:#3c4a5c;">
+      <li style="margin-bottom:12px;"><strong>Windows:</strong> Windows 10 or Windows 11, 64-bit. Around 150 MB of free disk space and an active internet connection.</li>
+      <li style="margin-bottom:12px;"><strong>Android:</strong> Android 8.0 or newer with a working Wi-Fi or mobile data connection.</li>
+      <li style="margin-bottom:12px;"><strong>For tunnel sharing:</strong> Both devices on the same Wi-Fi network.</li>
+      <li style="margin-bottom:0;"><strong>Permissions:</strong> The Android VPN prompt is required for DNS control, traffic limiting, and monitoring to work.</li>
+    </ul>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">🛠️ Troubleshooting Tips</h2>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;"><strong>The Windows program will not open.</strong> Right-click the file and choose <em>Run as administrator</em>. If that fails, download the file again from the releases page in case the earlier copy was interrupted.</p>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;"><strong>The phone shows a VPN warning.</strong> This is normal. NetPilot needs that slot to apply your DNS and speed rules. You can remove it at any time in Android settings.</p>
+    <p style="margin:0 0 14px 0; color:#3c4a5c;"><strong>The pairing code is rejected.</strong> Check that both devices are on the same Wi-Fi network, then ask your phone for a fresh code — codes expire after a short time.</p>
+    <p style="margin:0; color:#3c4a5c;"><strong>Speeds dropped after setting a limit.</strong> Open the Limiter tab and raise the cap, or switch the rule off entirely. Limits apply immediately and do not need a restart.</p>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="np-card" style="background:#ffffff; border-radius:16px; padding:30px 32px; margin-bottom:26px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:24px; font-weight:700; color:#12243b; margin:0 0 14px 0;">💬 Support and Feedback</h2>
+    <p style="margin:0; color:#3c4a5c;">
+      If something does not work as expected, the releases page is the best place to start — it lists what changed in each version, so you can confirm you are running the current one. Bug reports and feature ideas are welcome through the same repository. When describing a problem, mention your Windows version or Android version and the NetPilot version shown in the app, and the fix usually arrives much faster.
+    </p>
+  </section>
+
+  <!-- LICENSE -->
+  <footer style="background:#ffffff; border-radius:16px; padding:26px 32px; box-shadow:0 4px 18px rgba(18, 36, 59, 0.07); border:1px solid #e6edf5;">
+    <h2 style="font-size:22px; font-weight:700; color:#12243b; margin:0 0 12px 0;">📄 License</h2>
+    <p style="margin:0; color:#3c4a5c;">
+      NetPilot is released under the MIT License, which means you are free to use, copy, modify, and share it, provided the original copyright notice is kept. The full license text is included with the source code in the repository.
+    </p>
+  </footer>
+
 </div>
-<div id="toasts"></div>
-<script src="vendor/lightweight-charts.standalone.production.js"></script>
-<script src="market.js?v=1793750400"></script>
-<script src="app.js?v=1793750400"></script>
 </body>
 </html>
+```
+### Page Structure & Usability
+
+The page is built as a single-column, card-based layout that walks a non-technical Windows user from download to first run.
+
+- **Hero section** places the primary download button front and center, with a clear link to the releases page and the exact instruction "Visit this link to download the application."
+- **Feature cards** break down DNS control, bandwidth limiting, live monitoring, and tunnel sharing into plain-language bullet points, avoiding technical jargon.
+- **Step-by-step guides** for the Windows companion, Android app, and phone-tunnel pairing provide numbered actions with visual cues like status lights and pairing codes.
+- **Supporting sections** cover everyday use cases, system requirements, troubleshooting, and license, giving users enough context without overwhelming the main download flow.
+---
+
+**Optimization Tip:** You can replace the placeholder system requirements (disk space, Android version) with actual values from the NetPilot repo, and consider adding a direct .exe download link if the releases page hosts a specific installer file.
